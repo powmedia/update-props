@@ -25,3 +25,26 @@ var changes = update(user, { name: 'Jane', password: 'bar' }, ['name']);
 console.log(changes); // { before: { name: 'John' }, after: { name: 'Jane' } }
 console.log(user);    // { name: 'Jane', password: 'foo' }
 ```
+
+## Mongoose plugin usage
+```javascript
+var mongoose = require('mongoose');
+var updatePropsPlugin = require('update-props/mongoose-plugin');
+
+var userSchema = new mongoose.Schema({ /*...*/ });
+userSchema.plugin(updatePropsPlugin);
+
+userSchema.methods.update = function(props) {
+  var allowedKeys = [];
+  
+  if (this.hasPermission('update:name') {
+    allowedKeys.push('firstName', 'lastName');
+  }
+  
+  if (this.hasPermission('update:address') {
+    allowedKeys.push('address1', 'address2', 'city');
+  }
+  
+  return this.updateProps(props, allowedKeys);
+};
+```
