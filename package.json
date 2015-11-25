@@ -1,0 +1,31 @@
+{
+  "name": "update-props",
+  "version": "0.1.1",
+  "description": "Updates a whitelist of an object's properties and returns changes, if any",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powmedia/update-props.git"
+  },
+  "keywords": [
+    "object",
+    "update",
+    "changes"
+  ],
+  "author": "Charlie Davison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/powmedia/update-props/issues"
+  },
+  "homepage": "https://github.com/powmedia/update-props#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
