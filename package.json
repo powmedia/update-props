@@ -4,7 +4,7 @@
   "description": "Updates a whitelist of an object's properties and returns changes, if any",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha src/test.js"
+    "test": "./node_modules/.bin/mocha test.js"
   },
   "repository": {
     "type": "git",
