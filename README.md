@@ -22,10 +22,10 @@ var user = {
   password: 'foo'
 };
 
-var changes = update(user, { name: 'Jane', password: 'bar' }, ['name']);
+var changes = update(user, { name: 'Fred', password: 'bar' }, ['name']);
 
-console.log(changes); // { before: { name: 'John' }, after: { name: 'Jane' } }
-console.log(user);    // { name: 'Jane', password: 'foo' }
+console.log(changes); // { before: { name: 'John' }, after: { name: 'Fred' } }
+console.log(user);    // { name: 'Fred', password: 'foo' }
 ```
 
 ## Mongoose plugin usage
@@ -39,11 +39,11 @@ userSchema.plugin(updatePropsPlugin);
 userSchema.methods.update = function(props) {
   var allowedKeys = [];
   
-  if (this.hasPermission('update:name') {
+  if (this.hasPermission('update:name')) {
     allowedKeys.push('firstName', 'lastName');
   }
   
-  if (this.hasPermission('update:address') {
+  if (this.hasPermission('update:address')) {
     allowedKeys.push('address1', 'address2', 'city');
   }
   
