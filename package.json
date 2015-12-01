@@ -1,6 +1,6 @@
 {
   "name": "update-props",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Updates a whitelist of an object's properties and returns changes, if any",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,6 @@
     "sinon": "^1.17.2"
   },
   "dependencies": {
-    "underscore": "^1.8.3"
+    "lodash": "^3.10.1"
   }
 }

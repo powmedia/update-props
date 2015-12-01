@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('underscore');
+var _ = require('lodash');
 
 
 /**
@@ -29,7 +29,7 @@ module.exports = function(obj, props, allowedKeys) {
       after = {};
 
   _.each(allowedProps, function(newVal, key) {
-    var oldVal = _.isUndefined(obj[key]) ? null : obj[key];
+    var oldVal = obj[key];
 
     if (!_.isEqual(oldVal, newVal)) {
       before[key] = oldVal;

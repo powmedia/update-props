@@ -82,13 +82,13 @@ describe('updateAttrs()', function() {
     });
   });
 
-  it('sets changes.before to null if the property did not exist before', function() {
+  it('works with properties that did not exist before', function() {
     delete obj.address;
 
     var changes = update(obj, {
       address: 'New address'
     });
 
-    test.strictEqual(changes.before.address, null);
+    test.strictEqual(changes.before.address, undefined);
   });
 });
