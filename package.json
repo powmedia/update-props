@@ -1,6 +1,6 @@
 {
   "name": "update-props",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Updates a whitelist of an object's properties and returns changes, if any",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/powmedia/update-props#readme",
   "devDependencies": {
-    "mocha": "^2.3.4",
-    "sinon": "^1.17.2"
+    "mocha": "^7.0.1",
+    "sinon": "^8.1.1"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.17.15"
   }
 }
